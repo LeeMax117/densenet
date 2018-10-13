@@ -62,7 +62,7 @@ def densenet(images, num_classes=1001, is_training=False,
                                          keep_prob=dropout_keep_prob)) as ssc:
             # first conv layer with conv kernal 7*7*2growth
             scope = 'conv1'
-            net = slim.conv2d(imamges, 2*growth,[7,7],stride=2,scope=scope)
+            net = slim.conv2d(images, 2*growth,[7,7],stride=2,scope=scope)
             end_points[scope] = net
 
             # first pooling layer with max pooling and stride is 2
